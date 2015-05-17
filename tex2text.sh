@@ -98,10 +98,10 @@ perl -p -i -e 's/X$//g' $ofile
 # handle escaped $
 perl -p -i -e 's/\\\$/\$/g' $ofile
 
-# unformat it, bf, sc, tt
-perl -p -i -e 's/\\text(it|bf|sc|tt){([^}]+)}/\2/g' $ofile
+# unformat it, bf, sc, tt, ttsm
+perl -p -i -e 's/\\text(it|bf|sc|tt|ttsm){([^}]+)}/\2/g' $ofile
 perl -p -i -e 's/\\emph{([^}]+)}/\1/g' $ofile
-perl -p -i -e 's/{\\(em|emph|bf|sc|tt) ([^}]+)}/\2/g' $ofile
+perl -p -i -e 's/{\\(em|emph|bf|sc|tt|ttsm) ([^}]+)}/\2/g' $ofile
 
 # dots
 perl -p -i -e 's/\\dots/\.\.\./g' $ofile
